@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/05 16:37:33 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/06 21:28:05 by nefimov          ###   ########.fr       */
+/*   Created: 2025/12/06 18:23:35 by nefimov           #+#    #+#             */
+/*   Updated: 2025/12/06 21:32:39 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#define NUM_OF_IDEAS 100
 
-class Dog : public Animal {
-public:
-    Dog(void);
-    Dog(const Dog& other);
-    ~Dog(void);
-    Dog& operator=(const Dog& other);
+#include <string>
 
-    void makeSound(void) const;
-private:
-    Brain* brain;
+class Brain {
+  public:
+    Brain(void);
+    Brain(const Brain& other);
+    ~Brain(void);
+    Brain& operator=(const Brain& other);
+
+  protected:
+    std::string ideas[NUM_OF_IDEAS];
 };
 
-#endif  // DOG_HPP 
+#endif  // BRAIN_HPP

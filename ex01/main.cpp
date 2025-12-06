@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 17:28:46 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/06 18:16:44 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/06 22:11:19 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include "Dog.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
+#include "Brain.hpp"
 
 int main(void) {
     std::cout << "=== Create Animal Class objects ===" << std::endl;
@@ -39,46 +40,20 @@ int main(void) {
     }
     std::cout << std::endl;
 
-    /*
-    std::cout << std::endl << "=== Cat Class ===" << std::endl;
-    Cat* my_cat = new Cat();
-    my_cat->makeSound();
-    delete my_cat;
+    std::cout << "=== Deep copy test ===" << std::endl;
+    Cat* original_cat = new Cat();
+    std::cout << "--" << std::endl;
+    {
+        Cat copy_cat = *original_cat;
+        std::cout << "--" << std::endl;
+        
+    }
+    std::cout << "--" << std::endl;
+    delete original_cat;
+    std::cout << "--" << std::endl;
+    std::cout << "Deep copy test passed" << std::endl;
     
-    Animal* my_an_cat = new Cat();
-    my_an_cat->makeSound();
-    delete my_cat;
+    std::cout << std::endl;
 
-    std::cout << std::endl << "=== Dog Class ===" << std::endl;
-    Dog* my_dog = new Dog();
-    my_dog->makeSound();
-    delete my_dog;
-
-    Animal* my_an_dog = new Dog();
-    my_an_dog->makeSound();
-    delete my_an_dog;
-
-    std::cout << std::endl << "=== Right Classes ===" << std::endl;
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    std::cout << " Type: " << j->getType() << " " << std::endl;
-    std::cout << " Type: " << i->getType() << " " << std::endl;
-    i->makeSound(); //will output the cat sound!
-    j->makeSound();
-    meta->makeSound();
-    delete meta;
-    delete j;
-    delete i;
-
-    std::cout << std::endl << "=== Wrong Classes ===" << std::endl;
-    const WrongAnimal* wrong_meta = new WrongAnimal();
-    const WrongAnimal* y = new WrongCat();
-    std::cout << " Type: " << y->getType() << " " << std::endl;
-    y->makeSound(); //will output the cat sound!
-    wrong_meta->makeSound();
-    delete wrong_meta;
-    delete y;
-    */
     return 0;
 }
