@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 16:37:24 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/05 17:20:25 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/06 16:42:56 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ Dog& Dog::operator=(const Dog& other) {
     return *this;
 }
 
-void Dog::makeSound(void) {
+void Dog::makeSound(void) const {
     std::cout << " Wuff!" << std::endl;
 }

@@ -23,7 +23,9 @@ INCS		:= .
 SRCS		:=	main.cpp	\
 				Animal.cpp	\
 				Cat.cpp		\
-				Dog.cpp
+				Dog.cpp		\
+				WrongAnimal.cpp	\
+				WrongCat.cpp
 
 OBJ_DIR		:= obj
 OBJS		:= $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
