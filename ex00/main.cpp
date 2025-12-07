@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 17:28:46 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/06 16:50:01 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/07 23:44:20 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main(void) {
     
     Animal* my_an_cat = new Cat();
     my_an_cat->makeSound();
-    delete my_cat;
+    delete my_an_cat;
 
     std::cout << std::endl << "=== Dog Class ===" << std::endl;
     Dog* my_dog = new Dog();
