@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 18:24:28 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/06 22:06:46 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/08 13:52:17 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,12 @@ Brain& Brain::operator=(const Brain& other) {
         }
     }
     return (*this);
+}
+
+const std::string (&Brain::getIdeas(void) const)[NUM_OF_IDEAS] {
+	return (ideas);
+}
+
+const std::string &Brain::getIdea(int index) const {
+	return (ideas[index]);
 }

@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 18:23:35 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/06 21:32:39 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/08 13:45:59 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ class Brain {
     Brain(const Brain& other);
     ~Brain(void);
     Brain& operator=(const Brain& other);
+
+	const std::string (&getIdeas(void) const)[NUM_OF_IDEAS];
+	const std::string &getIdea(int index) const;
 
   protected:
     std::string ideas[NUM_OF_IDEAS];
