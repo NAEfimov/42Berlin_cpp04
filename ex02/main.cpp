@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 17:28:46 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/06 22:11:19 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/08 14:33:10 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,12 @@
 #include "Brain.hpp"
 
 int main(void) {
-    std::cout << "=== Create Animal Class objects ===" << std::endl;
+	// std::cout << "=== Animal Class ===" << std::endl;
+    // Animal* my_animal = new Animal();
+    // my_animal->makeSound();
+    // delete my_animal;
+	
+	std::cout << "=== Create Cat and Dog objects ===" << std::endl;
     Animal* my_animals[ANIMAL_NUM];
     for (int i = 0; i < ANIMAL_NUM; ++i) {
         std::cout << "--" << i << "--" << std::endl;
@@ -33,7 +38,7 @@ int main(void) {
     }
     std::cout << std::endl;
     
-    std::cout << "=== Delete Animal Class objects ===" << std::endl;
+    std::cout << "=== Delete Cat and Dog objects ===" << std::endl;
     for (int i = 0; i < ANIMAL_NUM; ++i) {
         std::cout << "--" << i << "--" << std::endl;
         delete my_animals[i];

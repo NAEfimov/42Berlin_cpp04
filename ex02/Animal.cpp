@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 16:37:24 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/06 16:42:02 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/08 14:36:18 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ Animal& Animal::operator=(const Animal& other) {
     return *this;
 }
 
-void Animal::makeSound(void) const {
-    std::cout << " Some generic animal sound" << std::endl;
-}
+// void Animal::makeSound(void) const {
+//     std::cout << " Some generic animal sound" << std::endl;
+// }
 
 std::string Animal::getType(void) const {
     return (type);
