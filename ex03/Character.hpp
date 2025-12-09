@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:49:07 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/09 15:09:55 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/09 16:01:11 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 #define INV_SIZE 4
 
 #include <string>
-// #include "AMateria.hpp"
+#include "AMateria.hpp"
 #include "ICharacter.hpp"
-class AMateria;
+// class AMateria;
 // class ICharacter;
 
 class Character : public ICharacter {
@@ -33,6 +33,8 @@ class Character : public ICharacter {
 	void equip(AMateria* m);
 	void unequip(int idx);
 	void use(int idx, ICharacter& target);
+	// Add const AMateria* (&getInventory(void) const)[INV_SIZE]
+	// Add const AMateria* &getInventoryItem(int idx) const;
 
   private:
 	std::string	name;
