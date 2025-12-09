@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 16:10:05 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/08 16:22:54 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/09 12:31:35 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ std::string const &AMateria::getType() const {
 	return (this->type);
 }
 
-void AMateria::use(ICharacter& target) {
-    std::cout << "Abstract use method called for " << target.getName() << std::endl;
-}
+// void AMateria::use(ICharacter& target) {
+//     std::cout << "Abstract use method called for " << target.getName() << std::endl;
+// }

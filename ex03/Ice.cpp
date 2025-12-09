@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 17:34:40 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/08 17:39:06 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/09 15:01:08 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ Ice::Ice(Ice& other) : AMateria(other) {
 
 Ice::~Ice(void) {
     std::cout << "Ice destructor called" << std::endl;
-	
 }
 
 Ice& Ice::operator=(Ice& other) {

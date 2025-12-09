@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 16:02:10 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/08 17:22:28 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/09 15:01:01 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 #include "AMateria.hpp"
 
-class Cure : AMateria {
+class Cure : public AMateria {
+  public:
 	Cure(void);
 	Cure(Cure& other);
 	~Cure(void);

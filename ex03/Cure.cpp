@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 17:23:18 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/08 17:38:49 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/09 15:00:58 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ Cure::Cure(Cure& other) : AMateria(other) {
 
 Cure::~Cure(void) {
     std::cout << "Cure destructor called" << std::endl;
-	
 }
 
 Cure& Cure::operator=(Cure& other) {
