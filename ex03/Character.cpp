@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 14:36:48 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/09 15:12:07 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/10 12:40:34 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ Character::Character(std::string name) {
 Character::Character(Character& other) {
 	this->name = other.name;
 	for (int i = 0; i < INV_SIZE; ++i) {
+		if (this->inventory[i] != NULL)
+			delete this->inventory[i];
 		if (other.inventory[i] != NULL)
 			this->inventory[i] = other.inventory[i]->clone();
 		else
@@ -37,6 +39,8 @@ Character::Character(Character& other) {
 Character& Character::operator=(Character& other) {
 	this->name = other.name;
 	for (int i = 0; i < INV_SIZE; ++i) {
+		if (this->inventory[i] != NULL)
+			delete this->inventory[i];
 		if (other.inventory[i] != NULL)
 			this->inventory[i] = other.inventory[i]->clone();
 		else
@@ -47,8 +51,10 @@ Character& Character::operator=(Character& other) {
 
 Character::~Character(void) {
 	for (int i = 0; i < INV_SIZE; ++i) {
-		if (inventory[i] != NULL)
+		if (inventory[i] != NULL) {
 			delete inventory[i];
+			inventory[i] = NULL;
+		}
 	}
 }
 
@@ -64,7 +70,7 @@ void Character::equip(AMateria* m) {
 void Character::unequip(int idx) {
 	if (idx < 0 || idx >= INV_SIZE || inventory[idx] == NULL)
 		return ;
-	inventory[idx] == NULL;
+	inventory[idx] = NULL;
 }
 
 void Character::use(int idx, ICharacter& target) {
@@ -73,6 +79,13 @@ void Character::use(int idx, ICharacter& target) {
 	inventory[idx]->use(target);
 }
 
+// const AMateria* (&Character::getInventory(void) const)[INV_SIZE] {
+// 	return (inventory);
+// }
+
+const AMateria* Character::getInventoryItem(int idx) const {
+	return (inventory[idx]);
+}
 //   private:
 // 	std::string	name;
 // 	AMateria*	inventory[INV_SIZE];

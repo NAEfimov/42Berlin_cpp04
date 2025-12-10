@@ -24,8 +24,8 @@ SRCS		:=	main.cpp			\
 				AMateria.cpp		\
 				Cure.cpp			\
 				Ice.cpp				\
-				ICharacter.cpp		
-# 				IMateriaSource.cpp
+				Character.cpp		
+# 				MateriaSource.cpp
 
 
 OBJ_DIR		:= obj

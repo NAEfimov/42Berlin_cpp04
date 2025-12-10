@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:49:07 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/09 16:01:11 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/10 12:32:21 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,12 @@ class Character : public ICharacter {
 	void equip(AMateria* m);
 	void unequip(int idx);
 	void use(int idx, ICharacter& target);
-	// Add const AMateria* (&getInventory(void) const)[INV_SIZE]
-	// Add const AMateria* &getInventoryItem(int idx) const;
+	// const AMateria* (&getInventory(void) const)[INV_SIZE];
+	const AMateria* getInventoryItem(int idx) const;
 
   private:
 	std::string	name;
 	AMateria*	inventory[INV_SIZE];
 };
-
 
 #endif  // CHARACTER_HPP
