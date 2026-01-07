@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:46:45 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/09 15:00:52 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/15 17:25:44 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ class AMateria
 {	
   public:
 	AMateria(void);
-	AMateria(std::string const & type);
-	AMateria(AMateria& other);
+	AMateria(const std::string& type);
+	AMateria(const AMateria& other);
 	virtual ~AMateria(void);
-	AMateria& operator=(AMateria& other);
+	AMateria& operator=(const AMateria& other);
 	
 	std::string const & getType() const;
 	virtual AMateria* clone() const = 0;

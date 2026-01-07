@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 14:36:48 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/10 12:40:34 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/15 21:22:55 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ Character::Character(void) {
 		inventory[i] = NULL;
 }
 
-Character::Character(std::string name) {
+Character::Character(const std::string name) {
 	this->name = name;
 	for (int i = 0; i < INV_SIZE; ++i)
 		inventory[i] = NULL;
 }
 
-Character::Character(Character& other) {
+Character::Character(const Character& other) {
 	this->name = other.name;
 	for (int i = 0; i < INV_SIZE; ++i) {
 		if (this->inventory[i] != NULL)
@@ -36,10 +36,9 @@ Character::Character(Character& other) {
 	}
 }
 
-Character& Character::operator=(Character& other) {
+Character& Character::operator=(const Character& other) {
 	this->name = other.name;
 	for (int i = 0; i < INV_SIZE; ++i) {
-		if (this->inventory[i] != NULL)
 			delete this->inventory[i];
 		if (other.inventory[i] != NULL)
 			this->inventory[i] = other.inventory[i]->clone();

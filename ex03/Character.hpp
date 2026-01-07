@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 15:49:07 by nefimov           #+#    #+#             */
-/*   Updated: 2025/12/10 12:32:21 by nefimov          ###   ########.fr       */
+/*   Updated: 2025/12/15 17:27:41 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@
 class Character : public ICharacter {
   public:
  	Character(void);
- 	Character(std::string name);
-	Character(Character& other);
-	Character& operator=(Character& other);
+ 	Character(const std::string name);
+	Character(const Character& other);
+	Character& operator=(const Character& other);
  	~Character(void);
 	
 	std::string const & getName() const;
